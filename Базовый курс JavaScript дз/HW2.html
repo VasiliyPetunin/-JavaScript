@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HW2</title>
+</head>
+<body>
+    <script>
+        // 1) Первая строка: Так как оператор ++ стоял перед наименованием переменной А, сначала А присвоилось значение 2(а(которая была равна 1) + 1), затем переменной С присвоилось значение переменной А.
+            // Вторая строка: Так как оператор ++ стоял после наименования переменной В, сначала переменной D присвоилось значение переменной В(которое было равно 1), затем переменной В присвоилось значение 2(В + 1).
+            // Третья строка: По аналогии с первой строкой переменной А сначала присвоилось значение 3(А(которое было равно 2) + 1), затем переменной С присвоилось значение 5(2 + А).
+            // Четвёртая строка: По аналогии со второй строкой сначала переменной D присвоилось значение 4(2 + В(значение которого равнялось 2), затем переменной В присвоилось значение 3(В + 1).
+            // Пятая строка: Значение переменной А не менялось с третьей строки.
+            // Шестая строка: Значение переменной В не менялось с четвёртой строки.
+
+        // 2) Х будет равен 5.
+
+        // 3)
+        let a = +prompt("Введите первое число:");
+        let b = +prompt("Введите второе число");
+
+        if (a >= 0 && b >= 0) {
+            let difference = a - b;
+            alert ("Разность двух положительных чисел: " + difference);
+        }   else if (a < 0 && b < 0) {
+            let productOfNumbers = a * b;
+            alert ("Произведение двух отрицательных чисел: " + productOfNumbers);
+        }   else {
+            let sum = a + b;
+            alert ("Сумма двух чисел с разными знаками: " + sum);
+        }
+
+        // 4)
+        a = +prompt ("Введите число в промежутке [0..15]: ");
+        switch (a) {
+            case 0:
+                alert ("Вывод чисел от " + a + " до 15: 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15");
+                break;
+            case 1:
+                alert ("Вывод чисел от " + a + " до 15: 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15");
+                break;
+            case 2:
+                alert ("Вывод чисел от " + a + " до 15: 2 3 4 5 6 7 8 9 10 11 12 13 14 15");
+                break;
+            case 3:
+                alert ("Вывод чисел от " + a + " до 15: 3 4 5 6 7 8 9 10 11 12 13 14 15");
+                break;
+            case 4:
+                alert ("Вывод чисел от " + a + " до 15: 4 5 6 7 8 9 10 11 12 13 14 15");
+                break;
+            case 5:
+                alert ("Вывод чисел от " + a + " до 15: 5 6 7 8 9 10 11 12 13 14 15");
+                break;
+            case 6:
+                alert ("Вывод чисел от " + a + " до 15: 6 7 8 9 10 11 12 13 14 15");
+                break;
+            case 7:
+                alert ("Вывод чисел от " + a + " до 15: 7 8 9 10 11 12 13 14 15");
+                break;
+            case 8:
+                alert ("Вывод чисел от " + a + " до 15: 8 9 10 11 12 13 14 15");
+                break;
+            case 9:
+                alert ("Вывод чисел от " + a + " до 15: 9 10 11 12 13 14 15");
+                break;
+            case 10:
+                alert ("Вывод чисел от " + a + " до 15: 10 11 12 13 14 15");
+                break;
+            case 11:
+                alert ("Вывод чисел от " + a + " до 15: 11 12 13 14 15");
+                break;
+            case 12:
+                alert ("Вывод чисел от " + a + " до 15: 12 13 14 15");
+                break;
+            case 13:
+                alert ("Вывод чисел от " + a + " до 15: 13 14 15");
+                break;
+            case 14:
+                alert ("Вывод чисел от " + a + " до 15: 14 15");
+                break;
+            case 15:
+                alert ("Вывод чисел от " + a + " до 15: 15");
+                break;
+            default:
+                alert ("Вы ввели неверное число!");
+                break;
+        }
+
+        // 5)
+        function addition (firstNumber, secondNumber) {
+            let additionResult = firstNumber + secondNumber;
+            return additionResult;
+        }
+
+        let additionNumberOne = +prompt ("Введите первое число для высчитывания суммы: ");
+        let additionNumberTwo = +prompt ("Введите второе число для высчитывания суммы: ");
+
+        let additionResult = addition (additionNumberOne, additionNumberTwo);
+        alert ("Сумма чисел, которые вы ввели: " + additionResult);
+
+
+        function subtraction (firstNumber, secondNumber) {
+            let subtractionResult = firstNumber - secondNumber;
+            return subtractionResult;
+        }
+
+        let subtractionNumberOne = +prompt ("Введите первое число для высчитывания разности: ");
+        let subtractionNumberTwo = +prompt ("Введите второе число для высчитывания разности: ");
+
+        let subtractionResult = subtraction (subtractionNumberOne, subtractionNumberTwo);
+        alert ("Разность чисел, которые вы ввели: " + subtractionResult);
+
+
+        function multiplication (firstNumber, secondNumber) {
+            let multiplicationResult = firstNumber * secondNumber;
+            return multiplicationResult;
+        }
+
+        let multiplicationNumberOne = +prompt ("Введите первое число для высчитывания произведения: ");
+        let multiplicationNumberTwo = +prompt ("Введите второе число для высчитывания произведения: ");
+
+        let multiplicationResult = multiplication (multiplicationNumberOne, multiplicationNumberTwo);
+        alert ("Произведение чисел, которые вы ввели: " + multiplicationResult);
+
+
+        function division (firstNumber, secondNumber) {
+            let divisionResult = firstNumber / secondNumber;
+            return divisionResult;
+        }
+
+        let divisionNumberOne = +prompt ("Введите первое число для высчитывания частного: ");
+        let divisionNumberTwo = +prompt ("Введите второе число для высчитывания частного: ");
+
+        let divisionResult = division (divisionNumberOne, divisionNumberTwo);
+        alert ("Частное чисел, которые вы ввели: " + divisionResult);
+
+        // 6)
+        function mathOperation (arg1, arg2, operation) {
+            let mathOperationResultFunction = undefined;
+            switch (operation) {
+                case 'Сложение':
+                    mathOperationResultFunction = addition (arg1, arg2);
+                    return mathOperationResultFunction;
+                    break;
+                case 'Вычитание':
+                    mathOperationResultFunction = subtraction (arg1, arg2);
+                    return mathOperationResultFunction;
+                    break;
+                case 'Умножение':
+                    mathOperationResultFunction = multiplication (arg1, arg2);
+                    return mathOperationResultFunction;
+                    break;
+                case 'Деление':
+                    mathOperationResultFunction = division (arg1, arg2);
+                    return mathOperationResultFunction;
+                    break;
+                default:
+                    alert ("Введённой Вами математической операции не существует, или введённое Вами название математической операции не соответствует образцу!");
+                    break;
+            }
+        }
+
+        let mathOperationName = prompt ("Введите название математической операции, которую желаете выполнить, в соответствии с образцом (Названия: 'Сложение' , 'Вычитание' , 'Умножение' , 'Деление' ): ");
+        let mathOperationArg1 = +prompt ("Введите первое число: ");
+        let mathOperationArg2 = +prompt ("Введите второе число: ");
+
+        let mathOperationResult = mathOperation (mathOperationArg1, mathOperationArg2, mathOperationName);
+        alert ("Результат выбранной математической операции: " + mathOperationResult);
+    </script>
+</body>
+</html>
